@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Painting Estimate — Vancouver, WA & Clark County | Shoreline Pro Services</title>
+<meta name="description" content="Licensed, bonded & insured residential painting contractor serving Vancouver, WA and Clark County. Call now for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5F1E6;
+    --cream-panel:#ECE4CF;
+    --navy:#1B2A47;
+    --navy-deep:#132038;
+    --amber:#C08A2E;
+    --amber-light:#D9A94A;
+    --charcoal:#2A2A28;
+    --white:#FFFFFF;
+    --line:rgba(27,42,71,0.14);
+    --radius:10px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--charcoal);
+    font-family:'DM Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Playfair Display', serif;
+    color:var(--navy);
+    margin:0 0 .4em;
+    line-height:1.15;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  img,svg{display:block;max-width:100%;}
+
+  /* ---------- Trust ribbon ---------- */
+  .ribbon{
+    background:var(--navy);
+    color:#EFE7D2;
+    font-size:13px;
+    letter-spacing:.02em;
+  }
+  .ribbon .wrap{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 28px;
+    justify-content:center;
+    padding:10px 24px;
+    text-align:center;
+  }
+  .ribbon strong{color:var(--amber-light);font-weight:600;}
+
+  /* ---------- Header / Hero ---------- */
+  header.hero{
+    padding:56px 0 64px;
+    position:relative;
+  }
+  .brandmark{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:34px;
+  }
+  .brandmark .dot{
+    width:10px;height:10px;border-radius:50%;
+    background:var(--amber);
+  }
+  .brandmark span{
+    font-family:'DM Sans',sans-serif;
+    font-weight:700;
+    letter-spacing:.16em;
+    font-size:13px;
+    text-transform:uppercase;
+    color:var(--navy);
+  }
+  .hero-inner{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:14px;
+  }
+  h1.headline{
+    font-size:clamp(32px, 5.2vw, 52px);
+    font-weight:800;
+    letter-spacing:-.01em;
+  }
+  .sub{
+    font-size:18px;
+    color:#4a4a45;
+    max-width:560px;
+    margin:18px auto 34px;
+  }
+  .cta-row{
+    display:flex;
+    gap:16px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:'DM Sans',sans-serif;
+    font-weight:700;
+    font-size:17px;
+    padding:16px 30px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    border:2px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{
+    background:var(--amber);
+    color:var(--navy-deep);
+    box-shadow:0 6px 18px rgba(192,138,46,.35);
+  }
+  .btn-primary:hover{box-shadow:0 10px 24px rgba(192,138,46,.45);}
+  .btn-secondary{
+    background:transparent;
+    border-color:var(--navy);
+    color:var(--navy);
+  }
+  .btn svg{width:20px;height:20px;flex-shrink:0;}
+  .phone-note{
+    margin-top:14px;
+    font-size:14px;
+    color:#6b6b63;
+  }
+  .phone-note a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:var(--amber);text-underline-offset:3px;}
+
+  /* ---------- Brushstroke divider (signature element) ---------- */
+  .brushstroke{
+    height:26px;
+    width:100%;
+    display:block;
+  }
+
+  /* ---------- Trust pillars ---------- */
+  .pillars{
+    background:var(--cream-panel);
+    padding:56px 0;
+  }
+  .pillar-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
+  .pillar{
+    text-align:center;
+    padding:0 12px;
+  }
+  .pillar-icon{
+    width:46px;height:46px;
+    margin:0 auto 16px;
+    color:var(--amber);
+  }
+  .pillar h3{
+    font-size:19px;
+    margin-bottom:8px;
+  }
+  .pillar p{
+    font-size:15px;
+    color:#4a4a45;
+    margin:0;
+  }
+
+  /* ---------- Services strip ---------- */
+  .services{
+    padding:54px 0 10px;
+    text-align:center;
+  }
+  .services h2{
+    font-size:26px;
+    margin-bottom:8px;
+  }
+  .services .sub{margin-bottom:30px;}
+  .service-chips{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .chip{
+    border:1px solid var(--line);
+    background:var(--white);
+    padding:10px 20px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--navy);
+  }
+
+  /* ---------- Offer / form section ---------- */
+  .offer{
+    padding:58px 0 70px;
+  }
+  .offer-card{
+    background:var(--white);
+    border-radius:16px;
+    box-shadow:0 18px 44px rgba(27,42,71,.10);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    overflow:hidden;
+  }
+  .offer-copy{
+    background:var(--navy);
+    color:#EFE7D2;
+    padding:44px 40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .offer-copy .eyebrow{color:var(--amber-light);}
+  .offer-copy h2{
+    color:#fff;
+    font-size:28px;
+  }
+  .offer-copy p{
+    color:#C9CFDC;
+    font-size:15px;
+  }
+  .offer-copy ul{
+    list-style:none;
+    padding:0;
+    margin:22px 0 0;
+  }
+  .offer-copy li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:14.5px;
+    margin-bottom:12px;
+    color:#E4E7EE;
+  }
+  .offer-copy li svg{
+    width:18px;height:18px;flex-shrink:0;margin-top:2px;color:var(--amber-light);
+  }
+  .offer-form{
+    padding:44px 40px;
+  }
+  .offer-form h3{
+    font-size:20px;
+    margin-bottom:4px;
+  }
+  .offer-form .form-sub{
+    font-size:14px;
+    color:#6b6b63;
+    margin-bottom:22px;
+  }
+  .field{
+    margin-bottom:16px;
+  }
+  .field label{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    color:var(--navy);
+    margin-bottom:6px;
+  }
+  .field input, .field select, .field textarea{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    font-family:'DM Sans',sans-serif;
+    font-size:15px;
+    background:#FCFAF4;
+    color:var(--charcoal);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:2px solid var(--amber);
+    outline-offset:1px;
+  }
+  .offer-form .btn-primary{
+    width:100%;
+    justify-content:center;
+    margin-top:6px;
+  }
+  .form-fallback{
+    font-size:12.5px;
+    color:#8a8a80;
+    margin-top:12px;
+    text-align:center;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--navy-deep);
+    color:#B9C0CF;
+    padding:34px 0;
+    font-size:13.5px;
+  }
+  footer .wrap{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:12px;
+    align-items:center;
+  }
+  footer strong{color:#fff;}
+  footer a{color:#D9A94A;text-decoration:none;}
+
+  @media (max-width:760px){
+    .pillar-grid{grid-template-columns:1fr;gap:30px;}
+    .offer-card{grid-template-columns:1fr;}
+    .offer-copy{padding:36px 28px;}
+    .offer-form{padding:36px 28px;}
+    .cta-row{flex-direction:column;align-items:stretch;}
+    .btn{justify-content:center;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Trust ribbon -->
+<div class="ribbon">
+  <div class="wrap">
+    <span><strong>Licensed</strong> WA #SHORES751PG</span>
+    <span><strong>Bonded &amp; Insured</strong></span>
+    <span>Serving <strong>Vancouver, WA &amp; Clark County</strong></span>
+  </div>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="brandmark"><span class="dot"></span><span>Shoreline Pro Services</span></div>
+    <div class="eyebrow">Free Estimate — No Obligation</div>
+    <h1 class="headline">A painter you can actually get on the phone.</h1>
+    <p class="sub">Licensed, bonded &amp; insured interior and exterior painting for Vancouver, WA and Clark County homes. Call now and talk to a real person about your project.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+13603382000" id="call-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (360) 338-2000
+      </a>
+      <a class="btn btn-secondary" href="#estimate">Get a Free Estimate ↓</a>
+    </div>
+    <p class="phone-note">Or scroll down — <a href="#estimate">tell us about your project</a> and we'll call you back same day.</p>
+  </div>
+</header>
+
+<!-- Brushstroke divider -->
+<svg class="brushstroke" viewBox="0 0 1080 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,14 C120,4 220,22 340,12 C460,2 560,20 680,10 C800,1 900,19 1080,8 L1080,26 L0,26 Z" fill="#C08A2E" opacity="0.9"/>
+  <path d="M0,18 C140,10 260,24 400,16 C540,8 660,22 800,14 C900,8 1000,20 1080,14 L1080,26 L0,26 Z" fill="#1B2A47" opacity="0.55"/>
+</svg>
+
+<!-- Trust pillars -->
+<section class="pillars">
+  <div class="wrap pillar-grid">
+    <div class="pillar">
+      <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6l-9-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+      <h3>Licensed &amp; Insured</h3>
+      <p>WA contractor license SHORES751PG. Fully bonded and insured on every job.</p>
+    </div>
+    <div class="pillar">
+      <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      <h3>Premium Coatings</h3>
+      <p>Sherwin-Williams Emerald Urethane Trim Enamel on trim and doors, Duration on walls and ceilings.</p>
+    </div>
+    <div class="pillar">
+      <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      <h3>Local &amp; Responsive</h3>
+      <p>Based in Vancouver, WA. We answer, we show up, we quote fast.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services strip -->
+<section class="services">
+  <div class="wrap">
+    <h2>What we do</h2>
+    <p class="sub" style="margin-left:auto;margin-right:auto;">Residential painting, done right the first time.</p>
+    <div class="service-chips">
+      <span class="chip">Exterior Painting</span>
+      <span class="chip">Interior Painting</span>
+      <span class="chip">Cabinet Refinishing</span>
+      <span class="chip">Deck &amp; Fence Staining</span>
+    </div>
+  </div>
+</section>
+
+<!-- Brushstroke divider -->
+<svg class="brushstroke" viewBox="0 0 1080 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,10 C130,20 240,4 360,14 C480,24 590,6 710,16 C830,24 930,6 1080,16 L1080,26 L0,26 Z" fill="#1B2A47" opacity="0.5"/>
+  <path d="M0,16 C150,6 270,22 410,12 C550,4 660,20 800,10 C910,4 1000,18 1080,12 L1080,26 L0,26 Z" fill="#C08A2E" opacity="0.9"/>
+</svg>
+
+<!-- Offer / form -->
+<section class="offer" id="estimate">
+  <div class="wrap">
+    <div class="offer-card">
+      <div class="offer-copy">
+        <div class="eyebrow">Your Free Estimate Includes</div>
+        <h2>No pressure. No upsell script. Just a real quote.</h2>
+        <p>Tell us a little about the project and we'll follow up same day — usually within the hour during business hours.</p>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+            On-site or video walkthrough, your choice
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+            Written quote with material and labor broken out
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+            No obligation to book
+          </li>
+        </ul>
+      </div>
+      <div class="offer-form">
+        <h3>Request your estimate</h3>
+        <p class="form-sub">Or just call — <a href="tel:+13603382000" style="color:var(--navy);font-weight:600;">(360) 338-2000</a></p>
+        <form id="estimate-form" action="https://formspree.io/f/xoeakala" method="POST">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="field">
+            <label for="service">Project type</label>
+            <select id="service" name="service">
+              <option>Exterior painting</option>
+              <option>Interior painting</option>
+              <option>Cabinet refinishing</option>
+              <option>Deck / fence staining</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">A few details (optional)</label>
+            <textarea id="message" name="message" rows="3"></textarea>
+          </div>
+          <!-- honeypot spam trap, keep hidden -->
+          <input type="text" name="_gotcha" style="display:none">
+          <button type="submit" class="btn btn-primary">Request My Free Estimate</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Shoreline Pro Services LLC</strong> · WA License SHORES751PG</div>
+    <div><a href="tel:+13603382000">(360) 338-2000</a> · Vancouver, WA · Clark County</div>
+  </div>
+</footer>
+
+<script>
+  // ---- Google Ads conversion tracking hooks ----
+  // 1) Paste your Google tag (gtag.js) base snippet here, right after <head>,
+  //    once you have your Conversion ID from Google Ads > Goals > Summary.
+  // 2) For phone-click tracking on THIS page, use Google's "Someone makes a call
+  //    by clicking a number on my website" conversion type — it gives you a
+  //    small snippet to attach to the tel: link below. Wire it into the
+  //    call button's onclick, e.g.:
+  //
+  //    document.getElementById('call-btn').addEventListener('click', function() {
+  //      gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXX'});
+  //    });
+  //
+  //    Same pattern applies to the phone link inside the form card.
+
+  // Simple UX nicety: confirm the form intent before Formspree redirect (optional).
+  document.getElementById('estimate-form').addEventListener('submit', function () {
+    // No-op placeholder — Formspree handles the POST once YOUR_FORM_ID is set.
+  });
+</script>
+
+</body>
+</html>
