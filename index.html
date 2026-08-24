@@ -293,6 +293,15 @@
     outline:2px solid var(--amber);
     outline-offset:1px;
   }
+  .field input[type="file"]{
+    padding:8px 10px;
+    font-size:13px;
+  }
+  .field-hint{
+    font-size:12.5px;
+    color:#6b6b64;
+    margin-top:6px;
+  }
   .offer-form .btn-primary{
     width:100%;
     justify-content:center;
@@ -346,7 +355,7 @@
 <!-- Hero -->
 <header class="hero">
   <div class="wrap hero-inner">
-    <div class="brandmark"><span class="dot"></span><span>Shoreline Pro Services</span></div>
+    <div class="brandmark"><img src="/logo.svg" alt="Shoreline Pro Services" width="150" height="34"></div>
     <div class="eyebrow">Free Estimate — No Obligation</div>
     <h1 class="headline">A painter you can actually get on the phone.</h1>
     <p class="sub">Licensed, bonded &amp; insured interior and exterior painting for Vancouver, WA and Clark County homes. Call now and talk to a real person about your project.</p>
@@ -436,8 +445,9 @@
       <div class="offer-form">
         <h3>Request your estimate</h3>
         <p class="form-sub">Or just call — <a href="tel:+13603382000" style="color:var(--navy);font-weight:600;">(360) 338-2000</a></p>
-        <form id="estimate-form" action="https://formspree.io/f/xoeakala" method="POST">
-          <input type="hidden" name="_next" value="/thank-you.html">
+        <form id="estimate-form" name="estimate" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="estimate">
+          <p style="display:none"><label>Leave this field blank: <input name="bot-field"></label></p>
           <div class="field">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
@@ -460,8 +470,11 @@
             <label for="message">A few details (optional)</label>
             <textarea id="message" name="message" rows="3"></textarea>
           </div>
-          <!-- honeypot spam trap, keep hidden -->
-          <input type="text" name="_gotcha" style="display:none">
+          <div class="field">
+            <label for="photos">Photos or videos of your project (optional)</label>
+            <input type="file" id="photos" name="photos" accept="image/*,video/*" multiple>
+            <p class="field-hint">A few photos help us quote faster. Large videos may take a moment to upload.</p>
+          </div>
           <button type="submit" class="btn btn-primary">Request My Free Estimate</button>
         </form>
       </div>
