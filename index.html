@@ -9,7 +9,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <style>
   :root{
     --cream:#F5F1E6;
@@ -18,6 +19,7 @@
     --navy-deep:#132038;
     --amber:#C08A2E;
     --amber-light:#D9A94A;
+    --amber-deep:#8A5F1C;
     --charcoal:#2A2A28;
     --white:#FFFFFF;
     --line:rgba(27,42,71,0.14);
@@ -95,7 +97,7 @@
     font-weight:600;
     letter-spacing:.08em;
     text-transform:uppercase;
-    color:var(--amber);
+    color:var(--amber-deep);
     margin-bottom:14px;
   }
   h1.headline{
@@ -174,7 +176,7 @@
     margin:0 auto 16px;
     color:var(--amber);
   }
-  .pillar h3{
+  .pillar h2{
     font-size:19px;
     margin-bottom:8px;
   }
@@ -318,7 +320,7 @@
     align-items:center;
   }
   footer strong{color:#fff;}
-  footer a{color:#D9A94A;text-decoration:none;}
+  footer a{color:#D9A94A;text-decoration:underline;text-underline-offset:2px;}
 
   @media (max-width:760px){
     .pillar-grid{grid-template-columns:1fr;gap:30px;}
@@ -359,6 +361,8 @@
   </div>
 </header>
 
+<main>
+
 <!-- Brushstroke divider -->
 <svg class="brushstroke" viewBox="0 0 1080 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M0,14 C120,4 220,22 340,12 C460,2 560,20 680,10 C800,1 900,19 1080,8 L1080,26 L0,26 Z" fill="#C08A2E" opacity="0.9"/>
@@ -370,17 +374,17 @@
   <div class="wrap pillar-grid">
     <div class="pillar">
       <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6l-9-4Z"/><path d="m9 12 2 2 4-4"/></svg>
-      <h3>Licensed &amp; Insured</h3>
+      <h2>Licensed &amp; Insured</h2>
       <p>WA contractor license SHORES751PG. Fully bonded and insured on every job.</p>
     </div>
     <div class="pillar">
       <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-      <h3>Premium Coatings</h3>
+      <h2>Premium Coatings</h2>
       <p>Sherwin-Williams Emerald Urethane Trim Enamel on trim and doors, Duration on walls and ceilings.</p>
     </div>
     <div class="pillar">
       <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-      <h3>Local &amp; Responsive</h3>
+      <h2>Local &amp; Responsive</h2>
       <p>Based in Vancouver, WA. We answer, we show up, we quote fast.</p>
     </div>
   </div>
@@ -464,6 +468,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
